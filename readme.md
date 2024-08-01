@@ -91,3 +91,4 @@ function updateCss(){
 }
 ```
 ***
+[pagination progress bar](https://dev-nayanbiswas.github.io/pagination-progress-Bar/)

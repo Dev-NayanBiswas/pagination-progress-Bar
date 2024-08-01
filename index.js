@@ -25,6 +25,8 @@ prev.addEventListener('click', ()=>{
 })
 
 function updateDOM(){
+
+    // Looping Through Every circle items and searching which one got the less index value compare with state value? and Update the DOM...
     circle.forEach((elem, index)=>{
         if(index<turnTimes){
             elem.classList.add("active");
@@ -34,10 +36,12 @@ function updateDOM(){
         }
     })
 
-    let activeCircle = document.querySelectorAll(".active");
-    // console.log((activeCircle.length -1), circle.length-1);
-    progressBar.style.width= ((activeCircle.length -1) / (circle.length -1))*100+"%" ;
+    updateCss();
+    enableAndDisable();
+}
 
+function enableAndDisable(){
+    // Here enabling the disabled button and disabling enable on conditions. . . 
     if(turnTimes===1){
         prev.disabled=true;
     }
@@ -50,5 +54,10 @@ function updateDOM(){
     }
 }
 
-
+function updateCss(){
+     // Calculating active elements and  getting a percentage value to get the desired width of progress bar and update it's cSS....
+     let activeCircle = document.querySelectorAll(".active");
+     // console.log((activeCircle.length -1), circle.length-1);
+     progressBar.style.width= ((activeCircle.length -1) / (circle.length -1))*100+"%" ;
+}
 

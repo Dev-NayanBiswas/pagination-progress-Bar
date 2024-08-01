@@ -26,7 +26,7 @@ body{
     justify-content: space-between;
     position: relative;
     max-width: 100%;
-    width: 25em;
+    width: 125em;
 }
 
 .progress__container::before{
